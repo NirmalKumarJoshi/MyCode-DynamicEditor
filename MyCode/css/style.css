@@ -1,0 +1,30 @@
+
+            
+            #header {
+                width:100%;
+                height: 38px;
+            }
+            
+            #logo {
+                float:left;
+            }
+            
+            #buttonContainer {
+                
+                width:233px;
+                margin: 0 auto;
+                
+            }
+            
+            .toggleButton {
+                
+                float:left;
+                padding: 6px;
+                font-size: 90%;
+                
+            }
+
+            
+            
+           
+            
