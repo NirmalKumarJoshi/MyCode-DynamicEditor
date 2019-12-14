@@ -1,7 +1,26 @@
-# MyCode-DynamicEditor
+# MyCode-Dynamic Editor
 
-<h3>To use this project(editor) download/clone it from the repository.</h3>
-<h3>After downloading just run coding.html</h3>.
-<h4>This editor is a dynamic editor which is basically an offline editor but as it contains CDN's for jQuery and Javascript 
-so need internet connection.You can also use it online by just downloading jQury and Javascript from respectives sites and adding them to the project folder further linking them in HTML file.</h4>
-<h5>Hope you like it..</h5>
+MyCode-Dynamic Editor is a dynamic editor which allows newbies to practice web development technologies such as HTML, CSS and Javascript.<br>
+One can write demo code and test it before implementing it to the real project using this editor.
+
+## Installation
+
+Downnload/pull the repository and simply run the file coding.html and you are good to begin!
+
+
+## Usage
+
+Run coding.html file<br>
+Write your code and view changes
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.<br>
+You can also work on open issues to contribute to the project.
+
+
+
+
+
+
+
