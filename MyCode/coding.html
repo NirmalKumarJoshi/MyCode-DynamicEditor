@@ -1,91 +1,94 @@
 <html>
 
 <head>
-    <title>MyCode-DynamicEditor</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        MyCode
+    </title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="./github.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body>
+<<body>
+
+
     <div id="header">
-        <div id="logo"><b>MyCode</b></div>
+
+        <div id="logo">
+
+            MyCode
+
+        </div>
 
         <div id="buttonContainer">
-            <div class="toggleButton" id="html">HTML</div>
+
+            <div class="toggleButton " id="html">HTML</div>
+
             <div class="toggleButton" id="css">CSS</div>
+
             <div class="toggleButton" id="javascript">JavaScript</div>
-            <div class="toggleButton" id="output">Output</div>
+
+            <div class="toggleButton " id="output">Output</div>
+
         </div>
+
     </div>
-    
+
     <div>
-  Download/View <a href="downloads/htmlcheatsheet.pdf" download>Html</a> and <a href="downloads/csscheatsheet.pdf" download>Css</a> cheat sheets
-  </div>
+        Download/View <a href="downloads/htmlcheatsheet.pdf" download>Html</a> and <a href="downloads/csscheatsheet.pdf"
+            download>Css</a> cheat sheets
+    </div>
 
     <div id="bodyContainer">
-        <textarea id="htmlPanel" class="panel">
-        <p id="paragraph">Hello World!</p></textarea>
 
-        <textarea id="cssPanel" class="panel hidden">
-         { color: green; }</textarea>
+        <textarea id="htmlPanel" class="panel"><p id="paragraph">Hello World!</p></textarea>
 
-        <textarea id="javascriptPanel" class="panel hidden">
-        document.getElementById("paragraph");</textarea>
+        <textarea id="cssPanel" class="panel hidden">p { color: green; }</textarea>
+
+        <textarea id="javascriptPanel" class="panel hidden">document.getElementById("paragraph");</textarea>
 
         <iframe id="outputPanel" class="panel"></iframe>
     </div>
-</body>
+    </body>
 
-<script type="text/javascript">
-    function updateOutput() {
-        $("iframe")
-            .contents()
-            .find("html")
-            .html(
-                "<html><head><style type='text/css'>" +
-                $("#cssPanel").val() +
-                "</style></head><body>" +
-                $("#htmlPanel").val() +
-                "</body></html>"
-            );
+    <script type="text/javascript">
+        function updateOutput() {
 
-        document
-            .getElementById("outputPanel")
-            .contentWindow.eval($("#javascriptPanel").val());
-    }
+            $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
 
-    $(".toggleButton").click(function () {
-        var panelId = $(this).attr("id") + "Panel";
+            document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+        }
 
-        $("#" + panelId).toggleClass("hidden");
+        $(".toggleButton").click(function () {
+            var panelId = $(this).attr("id") + "Panel";
 
-        var numberOfActivePanels = 4 - $(".hidden").length;
+            $("#" + panelId).toggleClass("hidden");
 
-        $(".panel").width($(window).width() / numberOfActivePanels - 10);
-    });
+            var numberOfActivePanels = 4 - $('.hidden').length;
 
-    $(".panel").height($(window).height() - $("#header").height() - 15);
+            $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
 
-    $(".panel").width($(window).width() / 2 - 10);
+        })
 
-    updateOutput();
+        $(".panel").height($(window).height() - $("#header").height() - 15);
 
-    $("textarea").on("change keyup paste", function () {
+        $(".panel").width(($(window).width() / 2) - 10);
+
         updateOutput();
-    });
-</script>
+
+        $("textarea").on("change keyup paste", function () {
+            updateOutput();
+        });
+    </script>
 
 </html>
