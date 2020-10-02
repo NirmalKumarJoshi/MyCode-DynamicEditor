@@ -2,10 +2,20 @@
             
             #header {
                 width:100%;
-                height: 38px;
+                height: 58px;
+                border: 3px solid lightgreen;
+               /* margin: 5 auto;*/
             }
             
             #logo {
+                float:left;
+                font-size: 130%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            #footnote{
+                font-size:12px;
+                font: italic;
                 float:left;
             }
             
@@ -13,17 +23,60 @@
                 
                 width:233px;
                 margin: 0 auto;
-                
             }
-            
+
+            .toggleButton:hover {
+
+                background-color: yellow;
+
+            }
+
             .toggleButton {
                 
                 float:left;
                 padding: 6px;
                 font-size: 90%;
-                
+                /*border: 3px double yellowgreen;*/
+                margin: -9 auto;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             }
 
+
+
+            #html{
+
+                border: 3px solid red;
+            }
+
+            #css{
+
+                border: 3px solid blue;
+            }
+            #javascript{
+
+                border: 3px solid orange;
+            }
+            #output{
+
+                border: 3px solid purple;
+            }
+            
+
+
+
+            #htmlPanel{
+
+                border: 5px solid red;
+            }
+            #cssPanel{
+
+                border: 5px solid blue;
+            }
+            #javascriptPanel{
+
+                border: 5px solid orange;
+            }
+        
             
             
            
